@@ -1,3 +1,18 @@
+
+'WHAT THE FLICK' uses the Angular framework and the Movie Database API to bring forth a functional movie app. 
+
+
+In this app, the user can search films by genre, create a favorites list, and a watch list. Much like the apps commonly used today,
+users of this app are sure to come across some of their favorite flicks of all time. 
+
+
+
+App Created by Carmen Griffin, Megan Carnaghi, Brandi Tarver, and Ami Ross
+
+
+
+
+
 # Movies
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
