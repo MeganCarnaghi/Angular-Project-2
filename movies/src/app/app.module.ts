@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { WatchlistPageComponent } from './watchlist-page/watchlist-page.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { WatchlistPageComponent } from './watchlist-page/watchlist-page.componen
     SearchCriteriaComponent,
     MovieListComponent,
     WatchlistPageComponent,
+    HomeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 
