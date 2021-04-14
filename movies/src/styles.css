@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: redoura;
+  src: url(Redoura.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #d9d8d9;
+  font-family: "Poppins", sans-serif;
+}
