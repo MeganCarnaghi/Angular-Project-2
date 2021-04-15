@@ -1,8 +1,6 @@
 <h1>What's Popular</h1>
 <div class = "movieContainer">
-    <ul>
-        <li>
-
-        </li>
+    <ul id = "posterWrapper">
+        <li id = "posterCard" *ngFor = "let movie of popularMovies">  <img #posterImage src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" alt=""> </li>
     </ul>
 </div>
