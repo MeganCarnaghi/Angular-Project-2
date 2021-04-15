@@ -16,12 +16,21 @@ export class MoviesService {
 
   constructor(private http: HttpClient) {}
 
-  searchMovies(searchTerm: string): any {
+  searchMovies = (searchTerm: string): any => {
     return this.http.get(this.searchMoviesUrl, {
       params: {
         api_key: this.apiKey,
         query: searchTerm,
       },
     });
-  }
+  };
+
+  getPopularMovies = (): any => {
+    console.log('I heard this');
+    return this.http.get(this.popularMoviesUrl, {
+      params: {
+        api_key: this.apiKey,
+      },
+    });
+  };
 }
