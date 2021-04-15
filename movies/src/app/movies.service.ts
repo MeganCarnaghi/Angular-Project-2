@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class MoviesService {
-  apiKey: string = 'c92a26a58678fac95ac049b1e5e1d7e4';
+  apiKey: string = 'fb4b364d4422884cdbd5d864fb8cafa0';
   searchMoviesUrl: string = 'https://api.themoviedb.org/3/search/movie';
   latestMoviesUrl: string = 'https://api.themoviedb.org/3/search/movie/latest';
   popularMoviesUrl: string =
