@@ -12,6 +12,16 @@ export class MoviesService {
     'https://api.themoviedb.org/3/search/movie/popular';
   upcomingMoviesUrl: string =
     'https://api.themoviedb.org/3/search/movie/upcoming';
+  movieGenreUrl: string = 'https://api.themoviedb.org/3/genre/movie/list';
 
   constructor(private http: HttpClient) {}
+
+  searchMovies(searchTerm: string): any {
+    return this.http.get(this.searchMoviesUrl, {
+      params: {
+        api_key: this.apiKey,
+        query: searchTerm,
+      },
+    });
+  }
 }

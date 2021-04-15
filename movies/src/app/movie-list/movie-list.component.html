@@ -1,1 +1,11 @@
-<p>movie-list works!</p>
+<div>
+  <ul>
+    <li>
+      {{ movieRef.title }}
+      <img
+        src="https://image.tmdb.org/t/p/w300{{ movieRef.poster_path }}"
+        alt="Movie Poster"
+      />
+    </li>
+  </ul>
+</div>

@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { MoviesService } from '../movies.service';
 
 @Component({
   selector: 'app-search-criteria',
   templateUrl: './search-criteria.component.html',
-  styleUrls: ['./search-criteria.component.css']
+  styleUrls: ['./search-criteria.component.css'],
 })
 export class SearchCriteriaComponent implements OnInit {
+  @Output() searchEvent = new EventEmitter<NgForm>();
 
-  constructor() { }
+  constructor(private movieService: MoviesService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
+  emitSearchEvent = (form: NgForm) => {
+    this.searchEvent.emit(form);
+  };
 }
