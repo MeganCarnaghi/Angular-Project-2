@@ -8,6 +8,10 @@ import { SearchCriteriaComponent } from './search-criteria/search-criteria.compo
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { WatchlistPageComponent } from './watchlist-page/watchlist-page.component';
 import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
+import { PopularComponent } from './popular/popular.component';
+import { LatestComponent } from './latest/latest.component';
+import { UpcomingComponent } from './upcoming/upcoming.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +20,10 @@ import { HomeComponent } from './home/home.component';
     MovieListComponent,
     WatchlistPageComponent,
     HomeComponent,
+    HeaderComponent,
+    PopularComponent,
+    LatestComponent,
+    UpcomingComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 
