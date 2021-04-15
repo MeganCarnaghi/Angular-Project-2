@@ -1,6 +1,6 @@
 @font-face {
   font-family: redoura;
-  src: url(Redoura.ttf);
+  src: url("../src/app/fonts/Redoura.ttf");
 }
 
 body {
