@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.header__logo {
+  width: 450px;
+}
+
+.header__button {
+  background-color: #0b9074;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
