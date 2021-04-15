@@ -10,9 +10,25 @@
   width: 450px;
 }
 
-.header__button {
+.header__watchList-link {
   background-color: #0b9074;
   font-size: 18px;
   border-radius: 5px;
   padding: 5px 10px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.header__watchlist-link:hover {
+  cursor: pointer;
+}
+
+.header__watchlist-link:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.header__watchlist-link:active {
+  text-decoration: none;
+  color: #ffffff;
 }
