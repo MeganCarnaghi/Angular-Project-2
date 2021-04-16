@@ -1,12 +1,9 @@
 <div class="searchResults__div">
-  <ul class="searchResults__list">
-    <li class="searchResults__item">
-      <h3>{{ movieRef.title }}</h3>
-      <img
-        class="searchResults__img"
-        src="https://image.tmdb.org/t/p/w300{{ movieRef.poster_path }}"
-        alt="Movie Poster"
-      />
-    </li>
-  </ul>
+  <h3>{{ movieRef.title }}</h3>
+  <img
+    class="searchResults__img"
+    src="https://image.tmdb.org/t/p/w300{{ movieRef.poster_path }}"
+    alt="Movie Poster"
+  />
+  <button class="addToWatchlist__button">Add to Watchlist</button>
 </div>

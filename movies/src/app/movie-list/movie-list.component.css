@@ -1,11 +1,20 @@
 .searchResults__div {
-  width: 100%;
-}
-
-.searchResults__list {
-  list-style-type: none;
+  margin: 25px 25px;
+  display: flex;
+  flex-direction: column;
 }
 
 .searchResults__img {
   width: 200px;
+}
+
+.addToWatchlist__button {
+  background-color: #0b9074;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #ffffff;
+  border: none;
+  display: block;
 }
