@@ -7,6 +7,12 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: #d9d8d9;
+  background-color: rgb(0, 0, 0);
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
+
+button,
+input {
   font-family: "Poppins", sans-serif;
 }

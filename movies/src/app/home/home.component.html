@@ -1,1 +1,7 @@
 <app-header></app-header>
+<app-search-criteria (searchEvent)="onSubmit($event)"></app-search-criteria>
+<app-movie-list
+  *ngFor="let movie of movieResults?.results"
+  [movieRef]="movie"
+></app-movie-list>
+<app-popular></app-popular>

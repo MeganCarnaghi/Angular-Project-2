@@ -1,1 +1,15 @@
-<p>search-criteria works!</p>
+<form
+  class="search__form"
+  #searchForm="ngForm"
+  (ngSubmit)="emitSearchEvent(searchForm)"
+>
+  <input
+    class="search__input"
+    type="text"
+    name="searchTerm"
+    id="searchTerm"
+    placeholder="Search for a movie..."
+    ngModel
+  />
+  <button class="search__button">Search</button>
+</form>
