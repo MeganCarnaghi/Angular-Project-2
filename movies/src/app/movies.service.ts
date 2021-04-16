@@ -13,6 +13,9 @@ export class MoviesService {
   upcomingMoviesUrl: string =
     'https://api.themoviedb.org/3/movie/upcoming';
   movieGenreUrl: string = 'https://api.themoviedb.org/3/genre/movie/list';
+  nowPlayingMoviesUrl: string =
+    'https://api.themoviedb.org/3/movie/now_playing';
+  
 
   constructor(private http: HttpClient) {}
 
@@ -28,6 +31,24 @@ export class MoviesService {
   getPopularMovies = (): any => {
     console.log('I heard this');
     return this.http.get(this.popularMoviesUrl, {
+      params: {
+        api_key: this.apiKey,
+      },
+    });
+  };
+
+  getNowPlayingMovies = (): any => {
+    console.log('this is upcoming movies');
+    return this.http.get(this.upcomingMoviesUrl, {
+      params: {
+        api_key: this.apiKey,
+      },
+    });
+  };
+
+  getUpcomingMovies = (): any => {
+    console.log('this is now playing movies');
+    return this.http.get(this.nowPlayingMoviesUrl, {
       params: {
         api_key: this.apiKey,
       },
