@@ -3,7 +3,7 @@ body{
     background-color: #0B9074;
 }
 
-h1{
+.nowPlayingHead{
     font-family: redoura; 
     color: #0B9074;
     padding: 5px;
@@ -54,3 +54,4 @@ img {
 li {
     display: block;
 }
+
