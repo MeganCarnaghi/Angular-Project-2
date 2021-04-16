@@ -2,10 +2,12 @@
   margin: 25px 25px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .searchResults__img {
   width: 200px;
+  margin: 10px 0;
 }
 
 .addToWatchlist__button {
