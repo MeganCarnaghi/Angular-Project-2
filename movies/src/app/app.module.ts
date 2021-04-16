@@ -10,9 +10,9 @@ import { WatchlistPageComponent } from './watchlist-page/watchlist-page.componen
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { PopularComponent } from './popular/popular.component';
-import { LatestComponent } from './latest/latest.component';
 import { UpcomingComponent } from './upcoming/upcoming.component';
 import { FooterComponent } from './footer/footer.component';
+import { TheatersComponent } from './theaters/theaters.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +23,9 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     HeaderComponent,
     PopularComponent,
-    LatestComponent,
     UpcomingComponent,
     FooterComponent,
+    TheatersComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 

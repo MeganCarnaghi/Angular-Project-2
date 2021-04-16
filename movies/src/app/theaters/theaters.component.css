@@ -2,7 +2,7 @@ body {
   background-color: #0b9074;
 }
 
-h1 {
+.nowPlayingHead {
   font-family: redoura;
   color: #0b9074;
   padding: 5px;
@@ -26,10 +26,6 @@ h1 {
   margin-right: 30px;
 }
 
-#posterCard {
-  width: 33%;
-}
-
 ::-webkit-scrollbar {
   width: 1px;
   margin-left: 10px;
@@ -42,6 +38,10 @@ h1 {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+#posterCard {
+  width: 33%;
 }
 
 img {

@@ -1,7 +1,7 @@
-<h1>Upcoming</h1>
+<h1 class="nowPlayingHead">Now Playing In Theaters</h1>
 <div class="movieContainer">
   <ul id="posterWrapper">
-    <li id="posterCard" *ngFor="let movie of upcomingMovies">
+    <li id="posterCard" *ngFor="let movie of nowPlayingMovies">
       <img
         #posterImage
         src="https://image.tmdb.org/t/p/w200{{ movie.poster_path }}"

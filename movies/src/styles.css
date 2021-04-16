@@ -20,3 +20,8 @@ input {
 button:hover {
   cursor: pointer;
 }
+
+h1 {
+  font-family: redoura;
+  font-size: 50px;
+}
