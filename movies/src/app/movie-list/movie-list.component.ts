@@ -9,9 +9,7 @@ import { MoviesService } from '../movies.service';
 })
 export class MovieListComponent implements OnInit {
   @Output() watchlistEvent = new EventEmitter<any>();
-  @Output() deletewatchlistEvent = new EventEmitter<void>();
   @Input() movieRef: any;
-  @Input() watchlistRef!: any[];
 
   watchlist: any[] = [];
 
