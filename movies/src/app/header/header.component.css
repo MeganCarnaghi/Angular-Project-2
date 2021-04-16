@@ -7,19 +7,5 @@
 }
 
 .header__logo {
-  width: 100%;
-}
-
-.header__watchlist-link:hover {
-  cursor: pointer;
-}
-
-.header__watchlist-link:visited {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.header__watchlist-link:active {
-  text-decoration: none;
-  color: #ffffff;
+  width: 1000px;
 }

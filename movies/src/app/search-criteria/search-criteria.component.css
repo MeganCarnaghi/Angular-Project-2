@@ -22,6 +22,20 @@ h1 {
   margin: 0 25px;
 }
 
+.watchlist-link:hover {
+  cursor: pointer;
+}
+
+.watchlist-link:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.watchlist-link:active {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 .search__form {
   margin-left: 25px;
   display: flex;
