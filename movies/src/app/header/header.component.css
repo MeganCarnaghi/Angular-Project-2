@@ -1,22 +1,13 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 10px;
   background-color: black;
 }
 
 .header__logo {
-  width: 450px;
-}
-
-.header__watchList-link {
-  background-color: #0b9074;
-  font-size: 18px;
-  border-radius: 5px;
-  padding: 5px 10px;
-  text-decoration: none;
-  color: #ffffff;
+  width: 100%;
 }
 
 .header__watchlist-link:hover {
