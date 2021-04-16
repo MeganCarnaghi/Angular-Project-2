@@ -8,8 +8,7 @@ export class MoviesService {
   apiKey: string = 'fb4b364d4422884cdbd5d864fb8cafa0';
   searchMoviesUrl: string = 'https://api.themoviedb.org/3/search/movie';
   latestMoviesUrl: string = 'https://api.themoviedb.org/3/search/movie/latest';
-  popularMoviesUrl: string =
-    'https://api.themoviedb.org/3/search/movie/popular';
+  popularMoviesUrl: string = 'https://api.themoviedb.org/3/movie/popular';
   upcomingMoviesUrl: string =
     'https://api.themoviedb.org/3/search/movie/upcoming';
   movieGenreUrl: string = 'https://api.themoviedb.org/3/genre/movie/list';
