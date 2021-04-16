@@ -1,0 +1,34 @@
+
+
+body{
+    background-color: #0B9074;
+}
+
+h1{
+    font-family: redoura; 
+    color: #0B9074;
+    padding: 5px;
+    margin-left: 25px;
+    font-size: 50px;
+
+}
+
+.movieContainer{
+    background-color: #0B9074;
+    height: 300px;
+    width: 98%;
+    margin: 0 auto;
+    border: 2px solid #d9d9d9;
+    border-radius: 25px;
+}
+
+#posterWrapper{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+#posterCard{
+    width: 33%;
+}
+
