@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { PopularComponent } from './popular/popular.component';
 import { LatestComponent } from './latest/latest.component';
 import { UpcomingComponent } from './upcoming/upcoming.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { UpcomingComponent } from './upcoming/upcoming.component';
     PopularComponent,
     LatestComponent,
     UpcomingComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 
