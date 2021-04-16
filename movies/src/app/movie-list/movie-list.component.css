@@ -1,0 +1,11 @@
+.searchResults__div {
+  width: 100%;
+}
+
+.searchResults__list {
+  list-style-type: none;
+}
+
+.searchResults__img {
+  width: 200px;
+}
