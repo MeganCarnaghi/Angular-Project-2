@@ -9,6 +9,7 @@ import { MoviesService } from '../movies.service';
 })
 export class HomeComponent implements OnInit {
   movieResults: any;
+  watchlist: any[] = [];
 
   constructor(private movieService: MoviesService) {}
 
