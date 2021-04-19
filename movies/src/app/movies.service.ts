@@ -26,7 +26,6 @@ export class MoviesService {
   }
 
   getPopularMovies(): any {
-    // console.log('I heard this');
     return this.http.get(this.popularMoviesUrl, {
       params: {
         api_key: this.apiKey,
@@ -35,7 +34,6 @@ export class MoviesService {
   }
 
   getNowPlayingMovies(): any {
-    // console.log('this is upcoming movies');
     return this.http.get(this.upcomingMoviesUrl, {
       params: {
         api_key: this.apiKey,
@@ -44,25 +42,21 @@ export class MoviesService {
   }
 
   getUpcomingMovies(): any {
-    // console.log('this is now playing movies');
     return this.http.get(this.nowPlayingMoviesUrl, {
       params: {
         api_key: this.apiKey,
       },
     });
-<<<<<<< HEAD
-  };
+  }
 
   getDescription = (): any => {
-    console.log('description should pop up here')
+    console.log('description should pop up here');
     return this.http.get(this.searchMoviesUrl, {
       params: {
         api_key: this.apiKey,
       },
     });
   };
-=======
-  }
 
   retrieveWatchList(): any[] {
     return this.watchlist;
@@ -78,5 +72,4 @@ export class MoviesService {
       this.watchlist.splice(index, 1);
     }
   }
->>>>>>> 59e7825e68ee7e0fb5d4c56a38591d197824f088
 }
