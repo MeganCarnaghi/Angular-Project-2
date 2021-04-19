@@ -50,4 +50,13 @@ export class MoviesService {
       },
     });
   };
+
+  getDescription = (): any => {
+    console.log('description should pop up here')
+    return this.http.get(this.searchMoviesUrl, {
+      params: {
+        api_key: this.apiKey,
+      },
+    });
+  };
 }

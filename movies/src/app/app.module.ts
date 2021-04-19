@@ -13,6 +13,7 @@ import { PopularComponent } from './popular/popular.component';
 import { UpcomingComponent } from './upcoming/upcoming.component';
 import { FooterComponent } from './footer/footer.component';
 import { TheatersComponent } from './theaters/theaters.component';
+import { DescriptionComponent } from './description/description.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { TheatersComponent } from './theaters/theaters.component';
     UpcomingComponent,
     FooterComponent,
     TheatersComponent,
+    DescriptionComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 
