@@ -1,1 +1,16 @@
 <app-header></app-header>
+<div class="watchlist-header__div">
+  <h1>Your Watchlist</h1>
+  <a class="home-link" routerLink="/home">Home</a>
+</div>
+
+<div class="watchlist__div">
+  <app-movie-list
+    class="searchResults__div"
+    *ngFor="let movie of watchlist"
+    [watchlistRef]="watchlist"
+    [movieRef]="movie"
+    (removeFromWatchlistEvent)="onRemoveFromWatchlist($event)"
+  >
+  </app-movie-list>
+</div>

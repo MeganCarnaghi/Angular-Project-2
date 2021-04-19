@@ -1,7 +1,11 @@
 .footer {
   width: 100%;
-  height: 100px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: 40px;
+}
+
+.footer__p {
+  padding: 10px 0;
 }

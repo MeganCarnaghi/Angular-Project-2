@@ -15,12 +15,25 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSubmit(form: NgForm) {
-    console.log(form.form.value.searchTerm);
+  onSearchSubmit(form: NgForm) {
     this.movieService
       .searchMovies(form.form.value.searchTerm)
       .subscribe((response: any) => {
         this.movieResults = response;
       });
+  }
+
+  onWatchList(movie: any): void {
+    this.movieService.toggleWatchList(movie);
+    this.getAndSetWatchList();
+  }
+
+  onDelete(movie: any): void {
+    this.movieService.toggleWatchList(movie);
+    this.getAndSetWatchList();
+  }
+
+  getAndSetWatchList(): void {
+    this.watchlist = this.movieService.retrieveWatchList();
   }
 }

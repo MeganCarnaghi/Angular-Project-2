@@ -11,5 +11,16 @@ export class WatchlistPageComponent implements OnInit {
 
   constructor(private movieService: MoviesService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getAndSetWatchList();
+  }
+
+  getAndSetWatchList() {
+    this.watchlist = this.movieService.retrieveWatchList();
+  }
+
+  onRemoveFromWatchlist(movie: any) {
+    this.movieService.toggleWatchList(movie);
+    this.getAndSetWatchList();
+  }
 }
