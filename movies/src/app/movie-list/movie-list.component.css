@@ -10,11 +10,13 @@
   margin: 10px 0;
 }
 
-.addToWatchlist__button {
+.addToWatchlist__button,
+.removeFromWatchlist__button {
   background-color: #0b9074;
   font-size: 18px;
   border-radius: 5px;
   padding: 5px 10px;
+  margin: 5px;
   text-decoration: none;
   color: #ffffff;
   border: none;
