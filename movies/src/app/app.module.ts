@@ -14,6 +14,7 @@ import { UpcomingComponent } from './upcoming/upcoming.component';
 import { FooterComponent } from './footer/footer.component';
 import { TheatersComponent } from './theaters/theaters.component';
 import { DescriptionComponent } from './description/description.component';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DescriptionComponent } from './description/description.component';
     UpcomingComponent,
     FooterComponent,
     TheatersComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    FilterComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 
