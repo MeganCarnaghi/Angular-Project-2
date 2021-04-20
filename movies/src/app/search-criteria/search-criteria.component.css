@@ -1,3 +1,8 @@
+@font-face {
+  font-family: redoura;
+  src: url("../fonts/Redoura.ttf");
+}
+
 .search__div {
   display: flex;
   justify-content: space-between;

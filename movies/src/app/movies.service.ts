@@ -62,18 +62,17 @@ export class MoviesService {
     });
   };
 
-  retrieveWatchList(): any[] {
-    return this.watchlist;
+  addMovieToWatchlist(movie: any): void {
+    this.watchlist.push(movie);
+    console.log(this.watchlist);
   }
 
-  toggleWatchList(movie: any): void {
-    let index = this.watchlist.findIndex((item) => {
-      return item.id === movie.id;
-    });
-    if (index === -1) {
-      this.watchlist.push(movie);
-    } else {
-      this.watchlist.splice(index, 1);
-    }
+  removeMovieFromWatchlist(movie: any): void {
+    const index = this.watchlist.indexOf(movie);
+    this.watchlist.splice(index, 1);
+  }
+
+  retrieveWatchList(): any[] {
+    return this.watchlist;
   }
 }

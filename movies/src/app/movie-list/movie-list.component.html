@@ -5,16 +5,7 @@
     src="https://image.tmdb.org/t/p/w300{{ movieRef.poster_path }}"
     alt="Movie Poster"
   />
-  <button
-    class="addToWatchlist__button"
-    (click)="emitAddToWatchlistEvent(movieRef)"
-  >
+  <button class="addToWatchlist__button" (click)="addToWatchList(movieRef)">
     Add to Watchlist
-  </button>
-  <button
-    class="removeFromWatchlist__button"
-    (click)="emitRemoveFromWatchlistEvent(movieRef)"
-  >
-    Remove from Watchlist
   </button>
 </div>

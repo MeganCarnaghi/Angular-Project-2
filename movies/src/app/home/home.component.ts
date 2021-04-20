@@ -22,18 +22,4 @@ export class HomeComponent implements OnInit {
         this.movieResults = response;
       });
   }
-
-  onWatchList(movie: any): void {
-    this.movieService.toggleWatchList(movie);
-    this.getAndSetWatchList();
-  }
-
-  onDelete(movie: any): void {
-    this.movieService.toggleWatchList(movie);
-    this.getAndSetWatchList();
-  }
-
-  getAndSetWatchList(): void {
-    this.watchlist = this.movieService.retrieveWatchList();
-  }
 }

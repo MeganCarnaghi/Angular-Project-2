@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { MoviesService } from '../movies.service';
 
 @Component({
@@ -8,28 +7,17 @@ import { MoviesService } from '../movies.service';
   styleUrls: ['./movie-list.component.css'],
 })
 export class MovieListComponent implements OnInit {
-  @Output() addToWatchlistEvent = new EventEmitter<any>();
-  @Output() removeFromWatchlistEvent = new EventEmitter<void>();
   @Input() movieRef: any;
-  @Input() watchlistRef!: any[];
 
   watchlist: any[] = [];
+  favorite: boolean = false;
 
   constructor(private movieService: MoviesService) {}
 
   ngOnInit(): void {}
 
-  emitAddToWatchlistEvent(form: NgForm): void {
-    this.addToWatchlistEvent.emit(form);
-  }
-
-  emitRemoveFromWatchlistEvent(movie: any): void {
-    this.removeFromWatchlistEvent.emit(movie);
-  }
-
-  checkwatchList(movie: any): boolean {
-    return this.movieRef.some((item: any) => {
-      return item.id === movie.id;
-    });
+  addToWatchList(movieRef: any) {
+    this.movieService.addMovieToWatchlist(movieRef);
+    console.log(movieRef);
   }
 }
