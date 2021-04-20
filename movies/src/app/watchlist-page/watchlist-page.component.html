@@ -5,12 +5,18 @@
 </div>
 
 <div class="watchlist__div">
-  <app-movie-list
-    class="searchResults__div"
-    *ngFor="let movie of watchlist"
-    [watchlistRef]="watchlist"
-    [movieRef]="movie"
-    (removeFromWatchlistEvent)="onRemoveFromWatchlist($event)"
-  >
-  </app-movie-list>
+  <ul class="watchlist__list">
+    <li class="watchlist__item" *ngFor="let movie of watchlist">
+      <img
+        src="https://image.tmdb.org/t/p/w200{{ movie.poster_path }}"
+        alt="movie poster"
+      />
+      <button
+        class="removeFromWatchlist__button"
+        (click)="removeFromWatchlist(movieRef)"
+      >
+        Remove from Watchlist
+      </button>
+    </li>
+  </ul>
 </div>

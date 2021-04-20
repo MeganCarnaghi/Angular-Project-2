@@ -27,7 +27,7 @@ import { DescriptionComponent } from './description/description.component';
     UpcomingComponent,
     FooterComponent,
     TheatersComponent,
-    DescriptionComponent
+    DescriptionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 

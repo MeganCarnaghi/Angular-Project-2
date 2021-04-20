@@ -6,8 +6,6 @@
   <app-movie-list
     *ngFor="let movie of movieResults?.results"
     [movieRef]="movie"
-    [watchlistRef]="watchlist"
-    (addToWatchlistEvent)="onWatchList($event)"
   ></app-movie-list>
 </div>
 

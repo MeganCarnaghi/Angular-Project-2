@@ -7,11 +7,12 @@ import { HttpClient } from '@angular/common/http';
 export class MoviesService {
   apiKey: string = 'fb4b364d4422884cdbd5d864fb8cafa0';
   searchMoviesUrl: string = 'https://api.themoviedb.org/3/search/movie';
-  movieGenreUrl: string = 'https://api.themoviedb.org/3/genre/movie/list';
+  movieGenreListUrl: string = 'https://api.themoviedb.org/3/genre/movie/list';
   nowPlayingMoviesUrl: string =
     'https://api.themoviedb.org/3/movie/now_playing';
   popularMoviesUrl: string = 'https://api.themoviedb.org/3/movie/popular';
   upcomingMoviesUrl: string = 'https://api.themoviedb.org/3/movie/upcoming';
+  trendingMoviesUrl: string = 'https://api.themoviedb.org/3/trending/movie/day';
   watchlist: any[] = [];
 
   constructor(private http: HttpClient) {}
@@ -58,18 +59,17 @@ export class MoviesService {
     });
   };
 
-  retrieveWatchList(): any[] {
-    return this.watchlist;
+  addMovieToWatchlist(movie: any): void {
+    this.watchlist.push(movie);
+    console.log(this.watchlist);
   }
 
-  toggleWatchList(movie: any): void {
-    let index = this.watchlist.findIndex((item) => {
-      return item.id === movie.id;
-    });
-    if (index === -1) {
-      this.watchlist.push(movie);
-    } else {
-      this.watchlist.splice(index, 1);
-    }
+  removeMovieFromWatchlist(movie: any): void {
+    const index = this.watchlist.indexOf(movie);
+    this.watchlist.splice(index, 1);
+  }
+
+  retrieveWatchList(): any[] {
+    return this.watchlist;
   }
 }

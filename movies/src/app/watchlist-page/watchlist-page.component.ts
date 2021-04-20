@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MoviesService } from '../movies.service';
 
 @Component({
@@ -7,20 +7,17 @@ import { MoviesService } from '../movies.service';
   styleUrls: ['./watchlist-page.component.css'],
 })
 export class WatchlistPageComponent implements OnInit {
+  @Input() movieRef: any;
+
   watchlist: any[] = [];
 
   constructor(private movieService: MoviesService) {}
 
   ngOnInit(): void {
-    this.getAndSetWatchList();
-  }
-
-  getAndSetWatchList() {
     this.watchlist = this.movieService.retrieveWatchList();
   }
 
-  onRemoveFromWatchlist(movie: any) {
-    this.movieService.toggleWatchList(movie);
-    this.getAndSetWatchList();
+  removeFromWatchlist(movieRef: any): void {
+    this.movieService.removeMovieFromWatchlist(movieRef);
   }
 }

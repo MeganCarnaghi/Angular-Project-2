@@ -14,7 +14,6 @@ export class TheatersComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getNowPlayingMovies().subscribe((response: any) => {
-      console.log(response.results);
       this.nowPlayingMovies = response.results;
     });
   }
