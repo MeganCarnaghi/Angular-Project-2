@@ -24,6 +24,7 @@ body {
   flex-direction: row;
   overflow-x: scroll;
   margin-right: 30px;
+  align-items: center;
 }
 
 ::-webkit-scrollbar {
