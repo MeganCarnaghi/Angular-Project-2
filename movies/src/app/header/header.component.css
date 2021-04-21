@@ -4,6 +4,7 @@
   align-items: center;
   padding: 10px;
   background-color: black;
+  border-bottom: 5px ridge #0b9074;
 }
 
 .header__logo {
