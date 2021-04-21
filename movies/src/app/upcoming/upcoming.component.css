@@ -8,10 +8,12 @@ body {
 }
 
 h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: redoura;
   color: #0b9074;
   padding: 5px;
-  margin-left: 25px;
   font-size: 50px;
   border-bottom: 5px ridge white;
   border-radius: 5px;
