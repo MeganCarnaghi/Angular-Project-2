@@ -19,8 +19,5 @@ export class DescriptionComponent implements OnInit {
     this.movieService.getDescription();
   }
 
-  // closeDescription() {
-  //   this.movieService.closeDescription();
-  // }
 
 }
