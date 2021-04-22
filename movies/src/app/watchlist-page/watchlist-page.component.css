@@ -60,3 +60,17 @@ ul > :first-child {
   border: none;
   display: block;
 }
+
+.watchlist__img {
+  height: 250px;
+  margin: 10px 0;
+  padding: 8px;
+  margin: 4px;
+  border-radius: 20px;
+  border: 4px ridge#0b9074;
+  padding: 8px;
+  margin: 4px;
+  border-radius: 20px;
+  border: 4px ridge#0b9074;
+  background-color: white;
+}

@@ -9,6 +9,7 @@
     <li class="watchlist__item" *ngFor="let movie of watchlist; let i = index">
       <a routerLink="/description"
         ><img
+          class="watchlist__img"
           src="https://image.tmdb.org/t/p/w200{{ movie.poster_path }}"
           alt="movie poster"
       /></a>
