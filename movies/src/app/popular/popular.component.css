@@ -8,19 +8,21 @@ body {
   }
   
   .popularHead {
-    font-family: redoura;
-    color: #0b9074;
-    padding: 5px;
-    margin-left: 25px;
-    font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: redoura;
+  color: #0b9074;
+  padding: 20px;
+  font-size: 50px;
+  border-bottom: 5px ridge white;
+  border-radius: 5px;
   }
   
   .movieContainer {
-    background-color: #0b9074;
     height: 350px;
     width: 98%;
     margin: 0 auto;
-    border: 2px solid #d9d9d9;
     border-radius: 25px;
   }
   
@@ -30,6 +32,7 @@ body {
     overflow-x: scroll;
     margin-right: 30px;
     align-items: center;
+   
   }
   
   ::-webkit-scrollbar {
@@ -39,7 +42,7 @@ body {
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #d9d9d9;
+    background: #ccc7c7;
     border-radius: 50px;
   }
   
@@ -54,7 +57,11 @@ body {
   }
   
   img {
-    padding: 5px;
+    padding: 8px;
+    margin: 4px;
+    border-radius: 20px;
+    border: 4px ridge#0b9074;
+    background-color: white;
   }
   
   li {
