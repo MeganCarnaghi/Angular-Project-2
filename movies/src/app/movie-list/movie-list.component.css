@@ -3,11 +3,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .searchResults__img {
-  width: 200px;
+  height: 250px;
   margin: 10px 0;
+  padding: 8px;
+  margin: 4px;
+  border-radius: 20px;
+  border: 4px ridge#0b9074;
+  padding: 8px;
+  margin: 4px;
+  border-radius: 20px;
+  border: 4px ridge#0b9074;
+  background-color: white;
 }
 
 .addToWatchlist__button {
