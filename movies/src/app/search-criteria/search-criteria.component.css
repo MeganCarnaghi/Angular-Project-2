@@ -74,3 +74,10 @@ h1 {
   color: #0b9074;
   border: 2px solid #0b9074;
 }
+
+@media only screen and (max-width: 768px) {
+  .watchList-link {
+    font-size: 14px;
+    text-align: center;
+  }
+}
