@@ -17,7 +17,7 @@ export class WatchlistPageComponent implements OnInit {
     this.watchlist = this.movieService.retrieveWatchList();
   }
 
-  removeFromWatchlist(movieRef: any): void {
-    this.movieService.removeMovieFromWatchlist(movieRef);
+  removeMovieFromWatchlist(i: number): void {
+    this.watchlist.splice(i, 1);
   }
 }
