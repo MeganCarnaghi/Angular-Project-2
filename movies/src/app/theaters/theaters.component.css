@@ -62,3 +62,7 @@ img {
 li {
   display: block;
 }
+
+img:hover{
+  filter:opacity(75%) grayscale(30%);
+}
