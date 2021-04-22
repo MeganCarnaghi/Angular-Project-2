@@ -20,4 +20,8 @@ export class MovieListComponent implements OnInit {
     this.movieService.addMovieToWatchlist(movieRef);
     console.log(movieRef);
   }
+
+  checkWatchlistForMovie(movieRef: any) {
+    return this.movieService.checkWatchlist(movieRef);
+  }
 }

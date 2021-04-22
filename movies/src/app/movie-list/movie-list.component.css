@@ -21,3 +21,13 @@
   border: none;
   display: block;
 }
+
+.hide {
+  display: none;
+}
+
+.addToWatchlist__p {
+  width: 200px;
+  font-style: italic;
+  text-align: center;
+}

@@ -62,7 +62,6 @@ export class MoviesService {
 
   addMovieToWatchlist(movie: any): void {
     this.watchlist.push(movie);
-    console.log(this.watchlist);
   }
 
   removeMovieFromWatchlist(index: number): void {
@@ -71,5 +70,9 @@ export class MoviesService {
 
   retrieveWatchList(): any[] {
     return this.watchlist;
+  }
+
+  checkWatchlist(movie: any): boolean {
+    return this.watchlist.includes(movie);
   }
 }
