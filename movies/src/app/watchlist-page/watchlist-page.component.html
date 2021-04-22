@@ -4,20 +4,20 @@
   <a class="home-link" routerLink="/home">Home</a>
 </div>
 
-<app-header></app-header>
-<div class="watchlist-header__div">
-  <h1>Your Watchlist</h1>
-  <a class="home-link" routerLink="/home">Home</a>
-</div>
-
 <div class="watchlist__div">
   <ul class="watchlist__list">
     <li class="watchlist__item" *ngFor="let movie of watchlist">
-      <a routerLink="/description"><img src="https://image.tmdb.org/t/p/w200{{ movie.poster_path }}" alt="movie poster" /></a>
-      <button class="removeFromWatchlist__button" (click)="removeFromWatchlist(movieRef)">
+      <a routerLink="/description"
+        ><img
+          src="https://image.tmdb.org/t/p/w200{{ movie.poster_path }}"
+          alt="movie poster"
+      /></a>
+      <button
+        class="removeFromWatchlist__button"
+        (click)="removeFromWatchlist(movieRef)"
+      >
         Remove from Watchlist
       </button>
     </li>
   </ul>
 </div>
-
