@@ -34,6 +34,13 @@
   color: #ffffff;
   border: none;
   display: block;
+  transition-duration: 0.3s;
+}
+
+.addToWatchlist__button:hover {
+  background-color: #ffffff;
+  color: #0b9074;
+  border: 2px solid #0b9074;
 }
 
 .hide {

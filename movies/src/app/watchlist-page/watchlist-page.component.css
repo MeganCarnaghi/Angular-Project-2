@@ -29,6 +29,13 @@ h1 {
   text-decoration: none;
   color: #ffffff;
   margin: 0 25px;
+  transition-duration: 0.3s;
+}
+
+.home-link:hover {
+  background-color: #ffffff;
+  color: #0b9074;
+  border: 2px solid #0b9074;
 }
 
 .watchlist__list {
@@ -59,6 +66,13 @@ ul > :first-child {
   color: #ffffff;
   border: none;
   display: block;
+  transition-duration: 0.3s;
+}
+
+.removeFromWatchlist__button:hover {
+  background-color: #ffffff;
+  color: #0b9074;
+  border: 2px solid #0b9074;
 }
 
 .watchlist__img {
