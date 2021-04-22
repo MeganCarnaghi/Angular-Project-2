@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   background-color: black;
   border-bottom: 5px ridge #0b9074;
 }
