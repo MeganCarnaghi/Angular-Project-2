@@ -2,7 +2,7 @@
 <div class="movieContainer">
   <ul id="posterWrapper">
     <li id="posterCard" *ngFor="let movie of popularMovies">
-      <a routerLink="/description"><img
+      <a routerLink="/description/{{movie.id}}"><img
         #posterImage
         src="https://image.tmdb.org/t/p/w200{{ movie.poster_path }}"
         alt="movie poster"
@@ -11,5 +11,4 @@
     </li>
   </ul>
 </div>
-<div class= "bottomBorder"></div>
 

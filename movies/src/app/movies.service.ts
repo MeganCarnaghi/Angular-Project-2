@@ -9,7 +9,7 @@ export class MoviesService {
   searchMoviesUrl: string = 'https://api.themoviedb.org/3/search/movie';
   latestMoviesUrl: string = 'https://api.themoviedb.org/3/movie/latest';
   popularMoviesUrl: string = 'https://api.themoviedb.org/3/movie/popular';
-  upcomingMoviesUrl: string = 'https://api.themoviedb.org/3/movie/upcoming';
+  popularPeopleUrl: string = 'https://api.themoviedb.org/3/person/popular';
   movieGenreUrl: string = 'https://api.themoviedb.org/3/genre/movie/list';
   nowPlayingMoviesUrl: string =
     'https://api.themoviedb.org/3/movie/now_playing';
@@ -36,15 +36,15 @@ export class MoviesService {
   }
 
   getNowPlayingMovies(): any {
-    return this.http.get(this.upcomingMoviesUrl, {
+    return this.http.get(this.nowPlayingMoviesUrl, {
       params: {
         api_key: this.apiKey,
       },
     });
   }
 
-  getUpcomingMovies(): any {
-    return this.http.get(this.nowPlayingMoviesUrl, {
+  getPopularPeople(): any {
+    return this.http.get(this.popularPeopleUrl, {
       params: {
         api_key: this.apiKey,
       },

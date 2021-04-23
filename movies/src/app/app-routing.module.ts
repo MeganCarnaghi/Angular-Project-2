@@ -7,7 +7,7 @@ import { DescriptionComponent } from './description/description.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'watchlist', component: WatchlistPageComponent },
-  { path: 'description', component: DescriptionComponent },
+  { path: 'description/:id', component: DescriptionComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

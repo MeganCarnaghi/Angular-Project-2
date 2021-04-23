@@ -1,0 +1,15 @@
+<h1 class = "peopleHead">Popular Actors</h1>
+<div class="movieContainer">
+  <ul id="posterWrapper">
+    <li id="posterCard" *ngFor="let people of popularPeople">
+      <a routerLink="/description/{{people.id}}"><img
+        #posterImage
+        src="https://image.tmdb.org/t/p/w200{{ people.profile_path }}"
+        alt="movie poster"
+      />
+      <p class= "peopleName">{{people.name}}</p>
+    </a>
+    </li>
+  </ul>
+</div>
+

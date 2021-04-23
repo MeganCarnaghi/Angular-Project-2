@@ -13,6 +13,7 @@ export class DescriptionComponent implements OnInit {
   constructor(private movieService: MoviesService) { }
 
   ngOnInit(): void {
+    
   }
 
   openDescription() {
