@@ -14,7 +14,31 @@ export class FilterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+<<<<<<< HEAD
 
 
   
 }
+=======
+  // FilterComponent.movielist(Rating, Genre, Length) {
+  //   this.movieService.movielist();
+  // }
+
+  // checkWatchlistForMovie(movieRef: anyRating) {
+  //   return this.movieService.checkWatchlist(movieRef);
+  // }
+
+  // checkWatchlistForMovie(movieRef: anyGenre) {
+  //   return this.movieService.checkWatchlist(movieRef);
+  // }
+
+  // checkWatchlistForMovie(movieRef: anyLength) {
+  //   return this.movieService.checkWatchlist(movieRef);
+  // }
+
+  // addToFilteredWatchList(movieRef: any) {
+  //   this.movieService.addMovieToFilteredWatchlist(movieRef);
+  //   console.log(movieRef);
+  // }
+}
+>>>>>>> eecf56e8abf4e673df9743db0b6a51fab778e82b

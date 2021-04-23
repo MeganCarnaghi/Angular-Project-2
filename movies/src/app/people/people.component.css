@@ -7,7 +7,7 @@ body {
   background-color: #0b9074;
 }
 
-h1 {
+.peopleHead {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,6 +23,7 @@ h1 {
   height: 350px;
   width: 98%;
   margin: 0 auto;
+  border-radius: 25px;
 }
 
 #posterWrapper {
@@ -33,13 +34,27 @@ h1 {
   align-items: center;
 }
 
+.peopleName {
+  color: #0b9074;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
 ::-webkit-scrollbar {
+  width: 5px;
   height: 8px;
   margin-left: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d9d9d9;
+  background: #ccc7c7;
   border-radius: 50px;
 }
 
@@ -55,9 +70,6 @@ img {
   padding: 8px;
   margin: 4px;
   border-radius: 20px;
-  border: 4px ridge#0b9074;    padding: 8px;
-  margin: 4px;
-  border-radius: 20px;
   border: 4px ridge#0b9074;
   background-color: white;
 }
@@ -66,6 +78,6 @@ li {
   display: block;
 }
 
-img:hover{
-  filter:opacity(75%) grayscale(30%);
+img:hover {
+  filter: opacity(75%) grayscale(30%);
 }

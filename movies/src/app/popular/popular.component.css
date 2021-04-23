@@ -21,9 +21,8 @@ body {
   
   .movieContainer {
     height: 350px;
-    width: 98%;
+    width: 600px;
     margin: 0 auto;
-    border-radius: 25px;
   }
   
   #posterWrapper {
@@ -50,10 +49,8 @@ body {
     background: #555;
   }
 
-  
-  
   #posterCard {
-    width: 33%;
+    max-width: 600px;
   }
   
   img {
@@ -71,3 +68,17 @@ body {
   img:hover{
     filter:opacity(75%) grayscale(30%);
   }
+
+  /* Desktop Styling */
+  @media only screen and (min-width: 768px) {
+
+    .movieContainer {
+        width: 98%; 
+    }
+
+    #posterCard {
+      width: 33%;
+    }
+
+  }
+  

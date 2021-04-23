@@ -1,10 +1,13 @@
-<div class="dropdown">
+
+  <div class="dropdown">
     <button class="dropbtn">Dropdown</button>
+    <select (change)="selectChangeHandler($event)"></select>
     <div class="custom-select">
-      <option value="0">Rating</option>
-      <option value="1">Genre</option>
-      <option value="2">Length/option>
+      <option value="Rating" ng-model= "Rating">
+      <option value="Genre" ng-model= "Genre">
+      <option value="Length" ng-model="Length">
     </div>
   </div> 
+
 
   //selects with options, holding values, ng model to bind to property on ts
