@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../movies.service';
+import { switchMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-description',
@@ -8,16 +10,12 @@ import { MoviesService } from '../movies.service';
 })
 export class DescriptionComponent implements OnInit {
 
-  popup: boolean = false;
+  movie: Observable<any> | null = null;
 
   constructor(private movieService: MoviesService) { }
 
   ngOnInit(): void {
+     this.route.paramMap.pipe(switchMap(p => this.movieService.getDescription(p.get('id'))))
+      .subscribe((movie) => (this.movie = movie));
   }
-
-  openDescription() {
-    this.movieService.getDescription();
-  }
-
-
 }
