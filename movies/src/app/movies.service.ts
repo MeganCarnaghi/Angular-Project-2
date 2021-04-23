@@ -15,20 +15,16 @@ export class MoviesService {
   nowPlayingMoviesUrl: string =
     'https://api.themoviedb.org/3/movie/now_playing';
 
-
-
   watchlist: any[] = [];
 
   constructor(private http: HttpClient) {}
 
   searchMovies(searchTerm: string, genre: number | null): any {
-    if(!genre){
+    if (!genre) {
       return this.http.get(this.searchMoviesUrl, {
         params: {
           api_key: this.apiKey,
           query: searchTerm,
-
-  
         },
       });
     }
@@ -36,8 +32,8 @@ export class MoviesService {
       params: {
         api_key: this.apiKey,
         query: searchTerm,
-       with_genres: genre.toString()
-
+        with_genres: genre.toString(),
+        // 'vote_average.gte': rating,
       },
     });
   }
@@ -97,7 +93,11 @@ export class MoviesService {
     );
   }
 
-  getMovieGenre(){
-    return this.http.get('https://api.themoviedb.org/3/genre/movie/list?api_key=fb4b364d4422884cdbd5d864fb8cafa0').pipe(map((response:any) => response.genres))
+  getMovieGenre() {
+    return this.http
+      .get(
+        'https://api.themoviedb.org/3/genre/movie/list?api_key=fb4b364d4422884cdbd5d864fb8cafa0'
+      )
+      .pipe(map((response: any) => response.genres));
   }
 }

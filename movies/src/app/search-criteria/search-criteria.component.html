@@ -15,9 +15,25 @@
     placeholder="Search for a movie..."
     ngModel
   />
-  <select [(ngModel)] = "selectedGenre" name = 'selectedGenre'>
-    <option *ngFor = "let genre of genres | async" value = "{{genre.id}}">{{genre.name}}</option>
+  <select [(ngModel)]="selectedGenre" name="selectedGenre">
+    <option *ngFor="let genre of genres | async" value="{{ genre.id }}">
+      {{ genre.name }}
+    </option>
   </select>
+
+  <!-- <select class="input-field" [(ngModel)]="rating" name="rating">
+    <option value="" disabled selected>Filter by Rating</option>
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select> -->
 
   <button class="search__button">Search</button>
   <a class="watchList-link" routerLink="/watchlist">Watchlist</a>
