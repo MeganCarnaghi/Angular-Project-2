@@ -15,6 +15,10 @@
     placeholder="Search for a movie..."
     ngModel
   />
+  <select [(ngModel)] = "selectedGenre" name = 'selectedGenre'>
+    <option *ngFor = "let genre of genres | async" value = "{{genre.id}}">{{genre.name}}</option>
+  </select>
+
   <button class="search__button">Search</button>
   <a class="watchList-link" routerLink="/watchlist">Watchlist</a>
 </form>

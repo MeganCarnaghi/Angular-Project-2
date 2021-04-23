@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Observable } from 'rxjs';
 import { MoviesService } from '../movies.service';
 
 @Component({
@@ -11,12 +12,18 @@ export class SearchCriteriaComponent implements OnInit {
   @Output() searchEvent = new EventEmitter<NgForm>();
   @Input() movie: any | null;
   movieResults: any;
+  genres: Observable<any> | null = null;
+
+  selectedGenre: number | null = null;
 
   constructor(private movieService: MoviesService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+   this.genres = this.movieService.getMovieGenre()
+  }
 
   emitSearchEvent(form: NgForm) {
     this.searchEvent.emit(form);
+    console.log(this.selectedGenre);
   }
 }
