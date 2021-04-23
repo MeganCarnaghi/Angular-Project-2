@@ -1,7 +1,6 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MoviesService } from '../movies.service';
-import { Movie } from '../interfaces/movie';
 
 @Component({
   selector: 'app-search-criteria',

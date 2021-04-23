@@ -3,7 +3,6 @@ import { Observable } from 'rxjs';
 import { MoviesService } from '../movies.service';
 import { switchMap } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
-import { Movie } from '../interfaces/movie';
 
 @Component({
   selector: 'app-description',
@@ -12,7 +11,6 @@ import { Movie } from '../interfaces/movie';
 })
 export class DescriptionComponent implements OnInit {
   movie: Observable<any> | any | null = null;
-  p: Movie | null = null;
 
   constructor(
     private movieService: MoviesService,
@@ -22,10 +20,9 @@ export class DescriptionComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap
       .pipe(switchMap((p) => this.movieService.getMovieWithId(p.get('id'))))
-      .subscribe((movie) => (this.movie = movie));
-  }
-
-  openDescription() {
-    this.movieService.getDescription();
+      .subscribe((movie) => {
+        console.log(movie);
+        this.movie = movie;
+      });
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MoviesService } from '../movies.service';
 
 @Component({
@@ -10,7 +10,6 @@ export class MovieListComponent implements OnInit {
   @Input() movieRef: any;
 
   watchlist: any[] = [];
-  favorite: boolean = false;
 
   constructor(private movieService: MoviesService) {}
 

@@ -1,5 +1,27 @@
-<main class="info-container">
-  <div>
-    {{ movie.title }}
-  </div>
-</main>
+<app-header></app-header>
+
+<div class="movieInfoHeader__div">
+  <h1>Movie Info</h1>
+  <a class="home-link" routerLink="/home">Home</a>
+</div>
+
+<div class="info-container">
+  <h2>{{ movie?.title }}</h2>
+  <img
+    class="searchResults__img"
+    src="https://image.tmdb.org/t/p/w200{{ movie.poster_path }}"
+    alt="Movie Poster"
+  />
+  <p class="movieInfo__p">
+    <span class="movieInfo__span">Release Date:&nbsp;&nbsp;</span
+    >{{ movie.release_date }}&nbsp;&nbsp;|&nbsp;&nbsp;
+    <span class="movieInfo__span">Average Viewer Rating:&nbsp;&nbsp;</span>
+    {{ movie.vote_average }}
+  </p>
+  <p class="movieInfo__p">
+    <span class="movieInfo__span">Overview:&nbsp;&nbsp;</span>
+    {{ movie.overview }}
+  </p>
+</div>
+
+<app-footer></app-footer>
