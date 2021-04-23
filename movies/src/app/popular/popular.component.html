@@ -1,15 +1,15 @@
-<h1 class = "popularHead">What's Popular</h1>
+<h1 class="popularHead">What's Popular</h1>
 <div class="movieContainer">
   <ul id="posterWrapper">
     <li id="posterCard" *ngFor="let movie of popularMovies">
-      <a routerLink="/description"><img
-        #posterImage
-        src="https://image.tmdb.org/t/p/w200{{ movie.poster_path }}"
-        alt="movie poster"
-      />
-    </a>
+      <a routerLink="/description/{{ movie.id }}"
+        ><img
+          #posterImage
+          src="https://image.tmdb.org/t/p/w200{{ movie.poster_path }}"
+          alt="movie poster"
+        />
+      </a>
     </li>
   </ul>
 </div>
-<div class= "bottomBorder"></div>
-
+<div class="bottomBorder"></div>
