@@ -64,10 +64,6 @@ export class MoviesService {
     this.watchlist.push(movie);
   }
 
-  // removeMovieFromWatchlist(movie: any): void {
-  //   console.log(this.watchlist.indexOf(movie));
-  // }
-
   retrieveWatchList(): any[] {
     return this.watchlist;
   }

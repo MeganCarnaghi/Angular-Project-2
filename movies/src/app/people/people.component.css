@@ -1,86 +1,83 @@
 @font-face {
-    font-family: redoura;
-    src: url("../fonts/Redoura.ttf");
-  }
+  font-family: redoura;
+  src: url("../fonts/Redoura.ttf");
+}
 
-  body {
-      background-color: #0b9074;
-    }
+body {
+  background-color: #0b9074;
+}
 
-    .peopleHead {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: redoura;
-    color: #0b9074;
-    padding: 20px;
-    font-size: 50px;
-    border-bottom: 5px ridge white;
-    border-radius: 5px;
-    }
+.peopleHead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: redoura;
+  color: #0b9074;
+  padding: 20px;
+  font-size: 50px;
+  border-bottom: 5px ridge white;
+  border-radius: 5px;
+}
 
-    .movieContainer {
-      height: 350px;
-      width: 98%;
-      margin: 0 auto;
-      border-radius: 25px;
-    }
+.movieContainer {
+  height: 350px;
+  width: 98%;
+  margin: 0 auto;
+  border-radius: 25px;
+}
 
-    #posterWrapper {
-      display: flex;
-      flex-direction: row;
-      overflow-x: scroll;
-      margin-right: 30px;
-      align-items: center;
+#posterWrapper {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  margin-right: 30px;
+  align-items: center;
+}
 
-    }
+.peopleName {
+  color: #0b9074;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
 
-    .peopleName{
-        color: #0b9074;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        font-size: 15px;
-    }
+a:link {
+  text-decoration: none;
+}
 
-    a:link{
-        text-decoration: none;
-    }
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  margin-left: 10px;
+}
 
-    ::-webkit-scrollbar {
-      width: 5px;
-      height: 8px;
-      margin-left: 10px;
-    }
+::-webkit-scrollbar-thumb {
+  background: #ccc7c7;
+  border-radius: 50px;
+}
 
-    ::-webkit-scrollbar-thumb {
-      background: #ccc7c7;
-      border-radius: 50px;
-    }
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
-    ::-webkit-scrollbar-thumb:hover {
-      background: #555;
-    }
+#posterCard {
+  width: 33%;
+}
 
+img {
+  padding: 8px;
+  margin: 4px;
+  border-radius: 20px;
+  border: 4px ridge#0b9074;
+  background-color: white;
+}
 
+li {
+  display: block;
+}
 
-    #posterCard {
-      width: 33%;
-    }
-
-    img {
-      padding: 8px;
-      margin: 4px;
-      border-radius: 20px;
-      border: 4px ridge#0b9074;
-      background-color: white;
-    }
-
-    li {
-      display: block;
-    }
-
-    img:hover{
-      filter:opacity(75%) grayscale(30%);
-    } 
+img:hover {
+  filter: opacity(75%) grayscale(30%);
+}
