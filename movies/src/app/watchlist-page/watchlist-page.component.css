@@ -3,6 +3,10 @@
   src: url("../fonts/Redoura.ttf");
 }
 
+html {
+  height: 100vh;
+}
+
 .watchlist__div {
   width: 100%;
 }
