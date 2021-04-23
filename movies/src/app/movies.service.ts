@@ -71,4 +71,9 @@ export class MoviesService {
   checkWatchlist(movie: any): boolean {
     return this.watchlist.includes(movie);
   }
+  getMovieWithId(id: string | null): any {
+    return this.http.get(
+      `https://api.themoviedb.org/3/search/movie${id}?apikey=fb4b364d4422884cdbd5d864fb8cafa0`
+    );
+  }
 }
