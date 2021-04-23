@@ -8,9 +8,7 @@ import { MoviesService } from '../movies.service';
 })
 export class MovieListComponent implements OnInit {
   @Input() movieRef: any;
-
   watchlist: any[] = [];
-
   showInfo: boolean = false;
 
   constructor(private movieService: MoviesService) {}
@@ -19,7 +17,6 @@ export class MovieListComponent implements OnInit {
 
   addToWatchList(movieRef: any) {
     this.movieService.addMovieToWatchlist(movieRef);
-    this.showInfo = !this.showInfo;
   }
 
   checkWatchlistForMovie(movieRef: any) {

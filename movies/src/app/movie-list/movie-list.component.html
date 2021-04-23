@@ -28,10 +28,6 @@
     <p class="movieInfo__p">
       <span class="movieInfo__span">Release Date:&nbsp;&nbsp;</span
       >{{ movieRef.release_date }}&nbsp;&nbsp;|&nbsp;&nbsp;
-      <span class="movieInfo__span">Runtime:&nbsp;&nbsp;</span>
-      {{ movieRef.runtime }}&nbsp;minutes
-    </p>
-    <p class="movieInfo__p">
       <span class="movieInfo__span"
         >Average Viewer Rating (out of 10):&nbsp;&nbsp;</span
       >
@@ -41,12 +37,5 @@
       <span class="movieInfo__span">Overview:&nbsp;&nbsp;</span>
       {{ movieRef.overview }}
     </p>
-    <button
-      class="addToWatchlist__button"
-      (click)="addToWatchList(movieRef)"
-      [ngClass]="{ hide: checkWatchlistForMovie(movieRef) }"
-    >
-      Add to Watchlist
-    </button>
   </div>
 </div>
