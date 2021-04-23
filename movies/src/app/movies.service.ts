@@ -76,4 +76,9 @@ export class MoviesService {
       `https://api.themoviedb.org/3/movie/${id}?api_key=fb4b364d4422884cdbd5d864fb8cafa0`
     );
   }
+  getPeopleWithId(id: string | null): any {
+    return this.http.get(
+      `https://api.themoviedb.org/3/person/${id}?api_key=fb4b364d4422884cdbd5d864fb8cafa0`
+    );
+  }
 }

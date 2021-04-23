@@ -15,6 +15,7 @@ import { TheatersComponent } from './theaters/theaters.component';
 import { DescriptionComponent } from './description/description.component';
 import { FilterComponent } from './filter/filter.component';
 import { PeopleComponent } from './people/people.component';
+import { PeopleDescriptionComponent } from './people-description/people-description.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { PeopleComponent } from './people/people.component';
     DescriptionComponent,
     FilterComponent,
     PeopleComponent,
+    PeopleDescriptionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 
