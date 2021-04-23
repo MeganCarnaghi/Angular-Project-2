@@ -1,5 +1,5 @@
 <div class="searchResults__div">
-  <a routerLink="/description">
+  <a (click)="showMovieInfo()">
     <img
       class="searchResults__img"
       src="https://image.tmdb.org/t/p/w200{{ movieRef.poster_path }}"
@@ -16,4 +16,37 @@
   <p class="addToWatchlist__p" *ngIf="checkWatchlistForMovie(movieRef)">
     *{{ movieRef.title }} has been added to your watchlist.
   </p>
+
+  <div *ngIf="showInfo" class="movieInfo__Div">
+    <button class="closeInfo__button" (click)="showMovieInfo()">X</button>
+    <h2>{{ movieRef.title }}</h2>
+    <img
+      class="movieInfo__img"
+      src="https://image.tmdb.org/t/p/w200{{ movieRef.poster_path }}"
+      alt="movie poster"
+    />
+    <p class="movieInfo__p">
+      <span class="movieInfo__span">Release Date:&nbsp;&nbsp;</span
+      >{{ movieRef.release_date }}&nbsp;&nbsp;|&nbsp;&nbsp;
+      <span class="movieInfo__span">Runtime:&nbsp;&nbsp;</span>
+      {{ movieRef.runtime }}&nbsp;minutes
+    </p>
+    <p class="movieInfo__p">
+      <span class="movieInfo__span"
+        >Average Viewer Rating (out of 10):&nbsp;&nbsp;</span
+      >
+      {{ movieRef.vote_average }}
+    </p>
+    <p class="movieInfo__p">
+      <span class="movieInfo__span">Overview:&nbsp;&nbsp;</span>
+      {{ movieRef.overview }}
+    </p>
+    <button
+      class="addToWatchlist__button"
+      (click)="addToWatchList(movieRef)"
+      [ngClass]="{ hide: checkWatchlistForMovie(movieRef) }"
+    >
+      Add to Watchlist
+    </button>
+  </div>
 </div>

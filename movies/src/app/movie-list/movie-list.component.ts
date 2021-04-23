@@ -11,16 +11,22 @@ export class MovieListComponent implements OnInit {
 
   watchlist: any[] = [];
 
+  showInfo: boolean = false;
+
   constructor(private movieService: MoviesService) {}
 
   ngOnInit(): void {}
 
   addToWatchList(movieRef: any) {
     this.movieService.addMovieToWatchlist(movieRef);
-    console.log(movieRef);
+    this.showInfo = !this.showInfo;
   }
 
   checkWatchlistForMovie(movieRef: any) {
     return this.movieService.checkWatchlist(movieRef);
+  }
+
+  showMovieInfo(): void {
+    this.showInfo = !this.showInfo;
   }
 }
