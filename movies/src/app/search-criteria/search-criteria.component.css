@@ -49,6 +49,7 @@ h1 {
   margin-left: 25px;
   margin-bottom: 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -77,8 +78,60 @@ h1 {
   border: 2px solid #0b9074;
 }
 
+select{
+  background-color: #0b9074;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: #ffffff;
+  border: none;
+  margin: 0 5px;
+  transition-duration: 0.3s;
+}
+
+
+[disabled] {
+  color: #ffffff;
+}
+
+option{
+  color: #ffffff;
+}
+
+.searchYear{
+  width: 200px;
+  padding: 6px;
+  font-size: 16px;
+}
+
 @media only screen and (max-width: 768px) {
   .watchList-link {
     text-align: center;
+  }
+
+  .searchYear {
+    width: 85%;
+    margin: 5px;
+  }
+
+  .search__input{
+    width: 85%;
+    margin: 5px;
+  }
+
+  select{
+    width: 85%;
+    margin: 5px;
+  }
+  
+  .search__button{
+    width: 85%;
+    margin: 5px;
+  }
+
+  .watchList-link{
+    width: 82%;
+    margin: 5px;
   }
 }

@@ -63,13 +63,13 @@
 }
 
 .movieInfo__Div {
-  position: absolute;
+  position: fixed;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 20px;
   border: 4px ridge#0b9074;
   width: 75%;
-  top: 0;
+  top: 10%;
   margin-left: auto;
   margin-right: auto;
   left: 0;
