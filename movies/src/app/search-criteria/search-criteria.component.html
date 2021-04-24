@@ -15,13 +15,17 @@
     placeholder="Search for a movie..."
     ngModel
   />
-  <select [(ngModel)] = "selectedGenre" name = 'selectedGenre' >
+  <select [(ngModel)]="selectedGenre" name="selectedGenre">
     <option [ngValue]="null" disabled>Filter By Genre</option>
-    <option *ngFor = "let genre of genres | async" value = "{{genre.id}}">{{genre.name}}</option>
+    <option *ngFor="let genre of genres | async" value="{{ genre.id }}">
+      {{ genre.name }}
+    </option>
   </select>
-  <select [(ngModel)] = "selectedRating" name = 'selectedRating' >
+  <select [(ngModel)]="selectedRating" name="selectedRating">
     <option [ngValue]="null" disabled>Filter By Rating</option>
-    <option *ngFor = "let rating of ratings " value = "{{rating}}">{{rating}}</option>
+    <option *ngFor="let rating of ratings" value="{{ rating }}">
+      {{ rating }}
+    </option>
   </select>
   <input
     class="searchYear"
@@ -32,7 +36,6 @@
     type="number"
     ngModel
   />
-
 
   <button class="search__button">Search</button>
   <a class="watchList-link" routerLink="/watchlist">Watchlist</a>

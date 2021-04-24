@@ -17,9 +17,13 @@ export class HomeComponent implements OnInit {
 
   onSearchSubmit(form: NgForm) {
     this.movieService
-      .searchMovies(form.form.value.searchTerm, form.form.value.selectedGenre, form.form.value.selectedRating, form.form.value.searchYear)
+      .searchMovies(
+        form.form.value.searchTerm,
+        form.form.value.selectedGenre,
+        form.form.value.selectedRating,
+        form.form.value.searchYear
+      )
       .subscribe((response: any) => {
         this.movieResults = response;
       });
   }
-}

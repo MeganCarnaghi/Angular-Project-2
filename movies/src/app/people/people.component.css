@@ -63,7 +63,7 @@ a:link {
 }
 
 #posterCard {
-    max-width: 600px;
+  max-width: 600px;
 }
 
 img {
@@ -82,15 +82,13 @@ img:hover {
   filter: opacity(75%) grayscale(30%);
 }
 
-  /* Desktop Styling */
-  @media only screen and (min-width: 768px) {
-
-    .movieContainer {
-        width: 98%; 
-    }
-
-    #posterCard {
-      width: 33%;
-    }
-
+/* Desktop Styling */
+@media only screen and (min-width: 768px) {
+  .movieContainer {
+    width: 98%;
   }
+
+  #posterCard {
+    width: 33%;
+  }
+}

@@ -14,13 +14,13 @@ export class SearchCriteriaComponent implements OnInit {
   movieResults: any;
   genres: Observable<any> | null = null;
   selectedGenre: number | null = null;
-  ratings: Number[] = [1,2,3,4,5,6,7,8,9,10];
+  ratings: Number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   selectedRating: number | null = null;
 
   constructor(private movieService: MoviesService) {}
 
   ngOnInit(): void {
-   this.genres = this.movieService.getMovieGenre()
+    this.genres = this.movieService.getMovieGenre();
   }
 
   emitSearchEvent(form: NgForm) {

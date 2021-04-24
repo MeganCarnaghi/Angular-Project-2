@@ -15,39 +15,41 @@ export class MoviesService {
   movieGenreUrl: string = 'https://api.themoviedb.org/3/genre/movie/list';
   nowPlayingMoviesUrl: string =
     'https://api.themoviedb.org/3/movie/now_playing';
-  
-
-
 
   watchlist: any[] = [];
 
   constructor(private http: HttpClient) {}
 
-  searchMovies(searchTerm: string, genre: number | null, rating: number | null, year: string | null): any {
+  searchMovies(
+    searchTerm: string,
+    genre: number | null,
+    rating: number | null,
+    year: string | null
+  ): any {
     let searchParams: any = {
-      api_key: this.apiKey
-    }
+      api_key: this.apiKey,
+    };
 
-    if (searchTerm){
+    if (searchTerm) {
       searchParams.query = searchTerm;
       return this.http.get(this.searchMoviesUrl, {
-        params: searchParams
+        params: searchParams,
       });
     } else {
-      if(genre){
-        searchParams.with_genres =  genre.toString();
+      if (genre) {
+        searchParams.with_genres = genre.toString();
       }
-  
-      if(rating){
+
+      if (rating) {
         searchParams['vote_average.gte'] = rating.toString();
       }
-  
-      if(year){
+
+      if (year) {
         searchParams.year = year;
       }
-  
+
       return this.http.get(this.discoverMoviesUrl, {
-        params: searchParams
+        params: searchParams,
       });
     }
   }
@@ -107,8 +109,12 @@ export class MoviesService {
     );
   }
 
-  getMovieGenre(){
-    return this.http.get('https://api.themoviedb.org/3/genre/movie/list?api_key=fb4b364d4422884cdbd5d864fb8cafa0').pipe(map((response:any) => response.genres))
+  getMovieGenre() {
+    return this.http
+      .get(
+        'https://api.themoviedb.org/3/genre/movie/list?api_key=fb4b364d4422884cdbd5d864fb8cafa0'
+      )
+      .pipe(map((response: any) => response.genres));
   }
 }
 

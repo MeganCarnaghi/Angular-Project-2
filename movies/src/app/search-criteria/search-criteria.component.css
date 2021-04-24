@@ -78,7 +78,7 @@ h1 {
   border: 2px solid #0b9074;
 }
 
-select{
+select {
   background-color: #0b9074;
   font-size: 18px;
   border-radius: 5px;
@@ -90,16 +90,15 @@ select{
   transition-duration: 0.3s;
 }
 
-
 [disabled] {
   color: #ffffff;
 }
 
-option{
+option {
   color: #ffffff;
 }
 
-.searchYear{
+.searchYear {
   width: 200px;
   padding: 6px;
   font-size: 16px;
@@ -115,22 +114,22 @@ option{
     margin: 5px;
   }
 
-  .search__input{
+  .search__input {
     width: 85%;
     margin: 5px;
   }
 
-  select{
-    width: 85%;
-    margin: 5px;
-  }
-  
-  .search__button{
+  select {
     width: 85%;
     margin: 5px;
   }
 
-  .watchList-link{
+  .search__button {
+    width: 85%;
+    margin: 5px;
+  }
+
+  .watchList-link {
     width: 82%;
     margin: 5px;
   }
