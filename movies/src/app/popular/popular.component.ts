@@ -15,7 +15,8 @@ export class PopularComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getPopularMovies().subscribe((response: any) => {
-      this.popularMovies = response.results;
+      this.popularMovies = response.results
+      console.log('response.results');
     });
   }
 }

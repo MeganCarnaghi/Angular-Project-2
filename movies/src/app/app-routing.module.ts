@@ -9,8 +9,6 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'watchlist', component: WatchlistPageComponent },
   { path: 'description/:id', component: DescriptionComponent },
-  { path: 'people-description/:id', component: PeopleDescriptionComponent },
-
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

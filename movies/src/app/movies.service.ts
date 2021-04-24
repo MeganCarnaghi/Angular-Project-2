@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -15,6 +16,7 @@ export class MoviesService {
   movieGenreUrl: string = 'https://api.themoviedb.org/3/genre/movie/list';
   nowPlayingMoviesUrl: string =
     'https://api.themoviedb.org/3/movie/now_playing';
+  descriptionUrl: string = 'https://api.themoviedb.org/3/movie/';
 
   watchlist: any[] = [];
 
@@ -78,9 +80,8 @@ export class MoviesService {
     });
   }
 
-  getDescription = (): any => {
-    console.log('description should pop up here');
-    return this.http.get(this.searchMoviesUrl, {
+  getDescription = (id: number): Observable<any> => {
+    return this.http.get(`${this.descriptionUrl}${id}`, {
       params: {
         api_key: this.apiKey,
       },
@@ -117,6 +118,3 @@ export class MoviesService {
       .pipe(map((response: any) => response.genres));
   }
 }
-
-
-
