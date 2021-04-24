@@ -117,3 +117,6 @@ export class MoviesService {
       .pipe(map((response: any) => response.genres));
   }
 }
+
+
+
