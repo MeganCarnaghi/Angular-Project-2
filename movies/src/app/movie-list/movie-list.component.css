@@ -80,6 +80,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 2px 2px 8px #0b382e, -2px -2px 8px #0b382e;
+  z-index: 1;
 }
 
 .closeInfo__button {
