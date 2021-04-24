@@ -2,7 +2,7 @@
 <div class="movieContainer">
   <ul id="posterWrapper">
     <li id="posterCard" *ngFor="let movie of upcomingMovies">
-      <a routerLink="/description"><img
+      <a routerLink="/description/{{movie.id}}"><img
         #posterImage
         src="https://image.tmdb.org/t/p/w200{{ movie.poster_path }}"
         alt="movie poster"

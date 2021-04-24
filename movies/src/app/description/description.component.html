@@ -3,13 +3,16 @@
 
     <p class='infoTitle'>Description</p>
     <div class='info-container'>
-        <a class="home-link" routerLink="/home">Home</a>
-
-        <div class='overview'>
-            <p>{{ movie.title}}</p>
-            <p>{{movie.overview}} </p>
-            <p>{{movie.release_date}} | <span>{{movie.genre_id}}</span></p>
-        </div>
+    
+ 
+       <div class='overview'>
+            <p id = 'title'>{{movie.title}}</p>
+            <p class = 'details' id='summary'>{{movie.overview}} </p>
+            <p class = 'details'>{{movie.genre_id}}</p>
+            <h2 id='release'>Release Date | Runtime:</h2>
+            <h2 class = 'details' id='dateTime'>{{movie.release_date}} | <span>{{movie.runtime}}</span></h2>
+            <a class="home-link" routerLink="/home">Home</a>
+        </div> 
     </div>
-
 </main>
+<app-footer></app-footer>

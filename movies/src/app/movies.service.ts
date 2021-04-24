@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -11,9 +12,9 @@ export class MoviesService {
   popularMoviesUrl: string = 'https://api.themoviedb.org/3/movie/popular';
   upcomingMoviesUrl: string = 'https://api.themoviedb.org/3/movie/upcoming';
   movieGenreUrl: string = 'https://api.themoviedb.org/3/genre/movie/list';
-  nowPlayingMoviesUrl: string =
-    'https://api.themoviedb.org/3/movie/now_playing';
-
+  nowPlayingMoviesUrl: string ='https://api.themoviedb.org/3/movie/now_playing';
+  descriptionUrl: string = 'https://api.themoviedb.org/3/movie/';
+  
   watchlist: any[] = [];
 
   constructor(private http: HttpClient) {}
@@ -51,13 +52,12 @@ export class MoviesService {
     });
   }
 
-  getDescription = (): any => {
-    console.log('description should pop up here');
-    return this.http.get(this.searchMoviesUrl, {
-      params: {
+  getDescription = (id: number): Observable <any> => {
+    return this.http.get(`${this.descriptionUrl}${id}`, {
+     params: {
         api_key: this.apiKey,
       },
-    });
+   })
   };
 
   addMovieToWatchlist(movie: any): void {
