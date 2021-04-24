@@ -63,13 +63,13 @@
 }
 
 .movieInfo__Div {
-  position: absolute;
+  position: fixed;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 20px;
   border: 4px ridge#0b9074;
   width: 75%;
-  top: 0;
+  top: 10%;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -97,16 +97,6 @@
 .movieInfo__span {
   font-weight: bold;
 }
-/* 
-.darken {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 1;
-  position: absolute;
-} */
 
 @media only screen and (max-width: 768px) {
   .searchResults__div {

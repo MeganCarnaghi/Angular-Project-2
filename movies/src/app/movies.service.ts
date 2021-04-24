@@ -7,7 +7,8 @@ import { map } from 'rxjs/operators';
 })
 export class MoviesService {
   apiKey: string = 'fb4b364d4422884cdbd5d864fb8cafa0';
-  searchMoviesUrl: string = 'https://api.themoviedb.org/3/discover/movie';
+  searchMoviesUrl: string = 'https://api.themoviedb.org/3/search/movie';
+  discoverMoviesUrl: string = 'https://api.themoviedb.org/3/discover/movie';
   latestMoviesUrl: string = 'https://api.themoviedb.org/3/movie/latest';
   popularMoviesUrl: string = 'https://api.themoviedb.org/3/movie/popular';
   popularPeopleUrl: string = 'https://api.themoviedb.org/3/person/popular';
@@ -19,23 +20,38 @@ export class MoviesService {
 
   constructor(private http: HttpClient) {}
 
-  searchMovies(searchTerm: string, genre: number | null): any {
-    if (!genre) {
+  searchMovies(
+    searchTerm: string,
+    genre: number | null,
+    rating: number | null,
+    year: string | null
+  ): any {
+    let searchParams: any = {
+      api_key: this.apiKey,
+    };
+
+    if (searchTerm) {
+      searchParams.query = searchTerm;
       return this.http.get(this.searchMoviesUrl, {
-        params: {
-          api_key: this.apiKey,
-          query: searchTerm,
-        },
+        params: searchParams,
+      });
+    } else {
+      if (genre) {
+        searchParams.with_genres = genre.toString();
+      }
+
+      if (rating) {
+        searchParams['vote_average.gte'] = rating.toString();
+      }
+
+      if (year) {
+        searchParams.year = year;
+      }
+
+      return this.http.get(this.discoverMoviesUrl, {
+        params: searchParams,
       });
     }
-    return this.http.get(this.searchMoviesUrl, {
-      params: {
-        api_key: this.apiKey,
-        query: searchTerm,
-        with_genres: genre.toString(),
-        // 'vote_average.gte': rating,
-      },
-    });
   }
 
   getPopularMovies(): any {
