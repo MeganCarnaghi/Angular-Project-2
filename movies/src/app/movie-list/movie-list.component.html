@@ -7,7 +7,7 @@
     />
     <img class = "posterNotFound" *ngIf = "!movieRef.poster_path" 
     class="searchResults__img"
-    src="/assets/posterNotFound1.png"
+    src="/assets/posterNotFound.png"
     alt="movie poster"
   />
     
@@ -31,9 +31,10 @@
       src="https://image.tmdb.org/t/p/w200{{ movieRef.poster_path }}"
       alt="movie poster"
     />
+
     <img class = "posterNotFound" *ngIf = "!movieRef.poster_path" 
     class="searchResults__img"
-    src="/assets/posterNotFound1.png"
+    src="/assets/posterNotFound.png"
     alt="movie poster"
   />
     <p class="movieInfo__p">
