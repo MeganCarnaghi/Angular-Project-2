@@ -3,6 +3,10 @@
   src: url("../fonts/Redoura.ttf");
 }
 
+html {
+  height: 100vh;
+}
+
 .watchlist__div {
   width: 100%;
 }
@@ -77,10 +81,6 @@ ul > :first-child {
 
 .watchlist__img {
   margin: 10px 0;
-  padding: 8px;
-  margin: 4px;
-  border-radius: 20px;
-  border: 4px ridge#0b9074;
   padding: 8px;
   margin: 4px;
   border-radius: 20px;

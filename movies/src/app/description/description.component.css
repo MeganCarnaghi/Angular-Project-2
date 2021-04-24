@@ -1,13 +1,13 @@
-*{
-    margin: 0;
-    padding: 0;
-};
-
-main{
-    position: relative;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.home-link{
+main {
+  position: relative;
+}
+
+.home-link {
   background-color: #0b9074;
   font-size: 18px;
   border-radius: 5px;
@@ -27,30 +27,32 @@ main{
   border: 2px solid #0b9074;
 }
 
-.overview{
+.overview {
   background-color: white;
   position: relative;
   padding: 10px 30px;
   border-radius: 20px;
-  border: 4px ridge#0b9074; padding: 8px;
+  border: 4px ridge#0b9074;
+  padding: 8px;
   margin-left: 30%;
   margin-top: 4%;
   border-radius: 20px;
   border: 4px ridge#0b9074;
   height: 65vh;
   width: 35vw;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #0b9074;
 }
 
-#release{
+#release {
   font-family: redoura;
   display: flex;
   justify-content: center;
   margin-top: 80px;
 }
 
-.infoTitle{
+.infoTitle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,26 +64,28 @@ main{
   margin-bottom: 5px;
 }
 
-#title{
+#title {
   display: flex;
   justify-content: center;
   font-family: redoura;
   font-size: 2em;
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
-.details{
+.details {
   margin-top: 10px;
-   display: flex;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-#summary{
+#summary {
   margin-left: 20px;
   margin-top: 50px;
 }
 
-#dateTime{
+#dateTime {
   margin-top: 30px;
   font-size: 1em;
 }

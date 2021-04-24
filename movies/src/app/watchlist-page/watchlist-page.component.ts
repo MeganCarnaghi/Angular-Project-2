@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Observable } from 'rxjs';
 import { MoviesService } from '../movies.service';
+import { switchMap } from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-watchlist-page',
@@ -11,10 +14,21 @@ export class WatchlistPageComponent implements OnInit {
 
   watchlist: any[] = [];
 
-  constructor(private movieService: MoviesService) {}
+  movie: Observable<any> | any | null = null;
+
+  constructor(
+    private movieService: MoviesService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.watchlist = this.movieService.retrieveWatchList();
+
+    this.route.paramMap
+      .pipe(switchMap((p) => this.movieService.getMovieWithId(p.get('id'))))
+      .subscribe((movie) => {
+        this.movie = movie;
+      });
   }
 
   removeMovieFromWatchlist(i: number): void {

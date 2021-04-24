@@ -11,7 +11,7 @@ dropbtn {
     display: inline-block;
   }
   
-  .dropdown-content {
+  .custom-select {
     display: none;
     position: absolute;
     background-color: #f1f1f1;

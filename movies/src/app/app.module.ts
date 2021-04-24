@@ -10,11 +10,12 @@ import { WatchlistPageComponent } from './watchlist-page/watchlist-page.componen
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { PopularComponent } from './popular/popular.component';
-import { UpcomingComponent } from './upcoming/upcoming.component';
 import { FooterComponent } from './footer/footer.component';
 import { TheatersComponent } from './theaters/theaters.component';
 import { DescriptionComponent } from './description/description.component';
 import { FilterComponent } from './filter/filter.component';
+import { PeopleComponent } from './people/people.component';
+import { PeopleDescriptionComponent } from './people-description/people-description.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +26,12 @@ import { FilterComponent } from './filter/filter.component';
     HomeComponent,
     HeaderComponent,
     PopularComponent,
-    UpcomingComponent,
     FooterComponent,
     TheatersComponent,
     DescriptionComponent,
     FilterComponent,
+    PeopleComponent,
+    PeopleDescriptionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MoviesService } from '../movies.service';
 
 @Component({
@@ -8,9 +8,8 @@ import { MoviesService } from '../movies.service';
 })
 export class MovieListComponent implements OnInit {
   @Input() movieRef: any;
-
   watchlist: any[] = [];
-  favorite: boolean = false;
+  showInfo: boolean = false;
 
   constructor(private movieService: MoviesService) {}
 
@@ -18,10 +17,13 @@ export class MovieListComponent implements OnInit {
 
   addToWatchList(movieRef: any) {
     this.movieService.addMovieToWatchlist(movieRef);
-    console.log(movieRef);
   }
 
   checkWatchlistForMovie(movieRef: any) {
     return this.movieService.checkWatchlist(movieRef);
+  }
+
+  showMovieInfo(): void {
+    this.showInfo = !this.showInfo;
   }
 }

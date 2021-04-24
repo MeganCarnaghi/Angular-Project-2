@@ -1,18 +1,20 @@
+<app-header></app-header>
 
 <main>
-
-    <p class='infoTitle'>Description</p>
-    <div class='info-container'>
-    
- 
-       <div class='overview'>
-            <p id = 'title'>{{movie.title}}</p>
-            <p class = 'details' id='summary'>{{movie.overview}} </p>
-            <p class = 'details'>{{movie.genre_id}}</p>
-            <h2 id='release'>Release Date | Runtime:</h2>
-            <h2 class = 'details' id='dateTime'>{{movie.release_date}} | <span>{{movie.runtime}}</span></h2>
-            <a class="home-link" routerLink="/home">Home</a>
-        </div> 
+  <h1 class="infoTitle">Description</h1>
+  <div class="info-container">
+    <div class="overview">
+      <h2 id="title">{{ movie.title }}</h2>
+      <p class="details" id="summary">{{ movie.overview }}</p>
+      <p class="details">{{ movie.genre_id }}</p>
+      <h2 id="release">Release Date | Runtime:</h2>
+      <h2 class="details" id="dateTime">
+        {{ movie.release_date }}&nbsp;&nbsp; | &nbsp;&nbsp;<span>{{
+          movie.runtime
+        }}</span>
+      </h2>
+      <a class="home-link" routerLink="/home">Home</a>
     </div>
+  </div>
 </main>
 <app-footer></app-footer>
