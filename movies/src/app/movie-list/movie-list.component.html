@@ -1,10 +1,16 @@
 <div class="searchResults__div">
   <a (click)="showMovieInfo()">
-    <img
+    <img *ngIf = "movieRef.poster_path" 
       class="searchResults__img"
       src="https://image.tmdb.org/t/p/w200{{ movieRef.poster_path }}"
       alt="movie poster"
     />
+    <img class = "posterNotFound" *ngIf = "!movieRef.poster_path" 
+    class="searchResults__img"
+    src="/assets/posterNotFound1.png"
+    alt="movie poster"
+  />
+    
   </a>
   <button
     class="addToWatchlist__button"
@@ -20,11 +26,16 @@
   <div *ngIf="showInfo" class="movieInfo__Div">
     <button class="closeInfo__button" (click)="showMovieInfo()">X</button>
     <h2>{{ movieRef.title }}</h2>
-    <img
+    <img *ngIf = "movieRef.poster_path"
       class="movieInfo__img"
       src="https://image.tmdb.org/t/p/w200{{ movieRef.poster_path }}"
       alt="movie poster"
     />
+    <img class = "posterNotFound" *ngIf = "!movieRef.poster_path" 
+    class="searchResults__img"
+    src="/assets/posterNotFound1.png"
+    alt="movie poster"
+  />
     <p class="movieInfo__p">
       <span class="movieInfo__span">Release Date:&nbsp;&nbsp;</span
       >{{ movieRef.release_date }}&nbsp;&nbsp;|&nbsp;&nbsp;

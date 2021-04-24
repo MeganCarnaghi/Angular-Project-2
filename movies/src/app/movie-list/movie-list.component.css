@@ -29,6 +29,11 @@
   background-color: white;
 }
 
+.posterNotFound{
+  width: 200px;
+  height: 300px;
+}
+
 .searchResults__img:hover {
   filter: opacity(75%) grayscale(30%);
 }
