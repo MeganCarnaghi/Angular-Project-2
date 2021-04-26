@@ -67,6 +67,11 @@
   text-align: center;
 }
 
+/* h3 {
+  width: 200px;
+  text-align: center;
+} */
+
 .movieInfo__Div {
   position: fixed;
   background-color: #ffffff;
@@ -86,7 +91,6 @@
   justify-content: center;
   box-shadow: 2px 2px 8px #0b382e, -2px -2px 8px #0b382e;
   z-index: 1;
-  overflow: scroll;
 }
 
 .closeInfo__button {

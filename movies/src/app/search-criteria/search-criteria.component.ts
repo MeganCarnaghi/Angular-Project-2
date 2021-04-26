@@ -25,6 +25,6 @@ export class SearchCriteriaComponent implements OnInit {
 
   emitSearchEvent(form: NgForm) {
     this.searchEvent.emit(form);
-    console.log(this.selectedGenre);
+    form.reset();
   }
 }
