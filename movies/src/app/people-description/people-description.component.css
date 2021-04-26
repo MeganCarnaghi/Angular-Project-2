@@ -6,10 +6,14 @@
   margin: 0 100px 50px 100px;
 }
 
+.peopleInfo__h1 {
+  flex: 1;
+}
+
 .peopleInfoHeader__div {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -20,11 +24,28 @@
   padding: 5px 10px;
   text-decoration: none;
   color: #ffffff;
-  margin: 0 25px;
+  margin: 0;
+  transition-duration: 0.3s;
+}
+
+.watchlist-link {
+  background-color: #0b9074;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 25px 0 10px;
   transition-duration: 0.3s;
 }
 
 .home-link:hover {
+  background-color: #ffffff;
+  color: #0b9074;
+  border: 2px solid #0b9074;
+}
+
+.watchlist-link:hover {
   background-color: #ffffff;
   color: #0b9074;
   border: 2px solid #0b9074;

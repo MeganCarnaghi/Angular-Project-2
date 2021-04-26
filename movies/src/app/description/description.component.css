@@ -14,7 +14,7 @@ main {
   padding: 5px 5px;
   text-decoration: none;
   color: #ffffff;
-  margin-top: 7em;
+  margin-top: 40px;
   transition-duration: 0.3s;
   display: flex;
   justify-content: center;
@@ -22,6 +22,26 @@ main {
 }
 
 .home-link:hover {
+  background-color: #ffffff;
+  color: #0b9074;
+  border: 2px solid #0b9074;
+}
+
+.watchlist-link {
+  background-color: #0b9074;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 5px 5px;
+  text-decoration: none;
+  color: #ffffff;
+  margin-top: 1em;
+  transition-duration: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.watchlist-link:hover {
   background-color: #ffffff;
   color: #0b9074;
   border: 2px solid #0b9074;
@@ -43,6 +63,9 @@ main {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #0b9074;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #release {
