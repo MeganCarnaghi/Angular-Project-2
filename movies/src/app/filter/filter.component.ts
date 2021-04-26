@@ -15,7 +15,7 @@ export class FilterComponent implements OnInit {
   //   this.movieService.movielist();
   // }
 
-  // checkWatchlistForMovie(movieRef: anyRating) {
+  // checkWatchlistForMovie(movieRef: string) {
   //   return this.movieService.checkWatchlist(movieRef);
   // }
 
