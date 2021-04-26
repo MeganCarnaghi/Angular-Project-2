@@ -4,14 +4,18 @@
   <h1>Actor Info</h1>
   <a class="home-link" routerLink="/home">Home</a>
 </div>
-
-<div class="info-container">
+  <div class="info-container">
+  <img *ngIf = "people.profile_path"
+  class="searchResults__img"
+  src="https://image.tmdb.org/t/p/w200{{ people.profile_path }}"
+  alt="Actor Poster"
+/>
+<img class = "posterNotFound" *ngIf = "!people.profile_path" 
+class="searchResults__img"
+src="/assets/posterNotFound.png"
+alt="movie poster"
+/>
   <h2>{{ people.name }}</h2>
-  <img
-    class="searchResults__img"
-    src="https://image.tmdb.org/t/p/w200{{ people.profile_path }}"
-    alt="Actor Poster"
-  />
   <p class="peopleInfo__p">
     <span class="peopleInfo__span">Birthday:&nbsp;&nbsp;</span
     >{{ people.birthday }}&nbsp;&nbsp;|&nbsp;&nbsp;

@@ -3,11 +3,17 @@
   <ul id="posterWrapper">
     <li id="posterCard" *ngFor="let people of popularPeople">
       <a routerLink="/people-description/{{ people.id }}"
-        ><img
+        ><img *ngIf = "people.profile_path"
           #posterImage
           src="https://image.tmdb.org/t/p/w200{{ people.profile_path }}"
           alt="movie poster"
         />
+
+        <img class = "posterNotFound" *ngIf = "!people.profile_path" 
+        class="searchResults__img"
+        src="/assets/posterNotFound.png"
+        alt="movie poster"
+      />
         <p class="peopleName">{{ people.name }}</p>
       </a>
     </li>
